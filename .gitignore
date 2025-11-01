@@ -1,0 +1,23 @@
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Environnements virtuels ---
+.venv/
+venv/
+env/
+
+# --- macOS ---
+.DS_Store
+
+# --- IDEs ---
+.idea/
+.vscode/
+
+# --- Notebooks / données temporaires ---
+*.ipynb_checkpoints
+*.csv
+*.xlsx
+*.log
