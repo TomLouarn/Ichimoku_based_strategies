@@ -34,7 +34,7 @@ def ask_shares (tickers):
 def portfolio(prices: pd.DataFrame, shares: dict):
     s = pd.Series(shares).reindex(prices.columns).fillna(0)
     port = (s*prices).sum(axis=1)
-    port.name = "Portfolio"
+    port.name = "src"
     return port
 
 def last_day(prices: pd.DataFrame, shares: dict)-> pd.DataFrame:
@@ -49,7 +49,7 @@ def last_day(prices: pd.DataFrame, shares: dict)-> pd.DataFrame:
 def plot_portfolio(port: pd.Series):
     plt.figure(figsize=(10,5))
     plt.plot(port.index, port.values)
-    plt.title("Portfolio")
+    plt.title("src")
     plt.xlabel("Date")
     plt.ylabel("USD")
     plt.grid(False)

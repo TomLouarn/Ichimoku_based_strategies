@@ -67,7 +67,7 @@ def portfolio_series(prices: pd.DataFrame, shares: dict) -> pd.Series:
     """
     s = pd.Series(shares).reindex(prices.columns).fillna(0.0)
     port = (prices * s).sum(axis=1)
-    port.name = "Portfolio"
+    port.name = "src"
     return port
 
 
